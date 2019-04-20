@@ -38,14 +38,13 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['es2015']
+                    presets: ['env']
                 }
             },
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    // use: ['css-loader', 'autoprefixer-loader?safe=true', 'sass-loader']
-                    use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
+                    use: ['css-loader', 'sass-loader']
                 })
             }
         ]
