@@ -1,0 +1,60 @@
+/*
+*
+* Media queries
+*
+*/
+@mixin res($from: false, $to: false) {
+    $media: "all";
+
+    @if ($from) {
+        $media: "#{$media} and (min-width : #{$from})";
+    }
+
+    @if ($to) {
+        $media: "#{$media} and (max-width : #{$to})";
+    }
+
+    @media #{$media} {
+        @content;
+    }
+}
+
+@mixin res-from($from) {
+    @include res($from, false) {
+        @content;
+    }
+}
+
+@mixin res-to($to) {
+    @include res(false, $to) {
+        @content;
+    }
+}
+
+
+/*
+  *
+  * Resize child block to all size of closest
+  * position: relative parent
+  *
+  */
+@mixin full-size() {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*
+  *
+  * Inline block mixins
+  *
+  */
+@mixin inline-block() {
+    display: inline-block;
+    vertical-align: top;
+}
+
+// Spaces between inline-blocks
+@mixin magic-margin-reset() {
+    font-size: 0;
+}

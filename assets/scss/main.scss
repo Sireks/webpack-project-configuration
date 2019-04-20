@@ -1,15 +1,31 @@
-// ----- #Core -----
-@import 'core/mixins';
-@import 'core/reset';
-@import 'core/variables';
-@import 'core/fonts';
-@import 'core/base';
-
-// ----- #Patterns -----
-@import 'patterns/button';
-@import 'patterns/topic';
-@import 'patterns/tools';
+// ----- #Helpers -----
+@import 'helpers/variables';
+@import 'helpers/mixins';
 
 
-// ----- #Blocks -----
 
+// ----- #Base -----
+@import 'base/typography';
+@import 'base/reset';
+@import 'base/base';
+@import 'base/keyframes';
+
+
+
+// ----- #Utilities -----
+@import 'utilities';
+
+
+
+// ----- #Layouts -----
+@import 'layouts/layouts';
+
+
+
+// ----- #Components -----
+@import 'components/news-item';
+
+
+
+// ----- #Shame -----
+@import 'shame';
